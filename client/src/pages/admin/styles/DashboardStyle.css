@@ -1,0 +1,57 @@
+/* Basic Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 12px; /* Slightly wider scrollbar for better visibility */
+    height: 12px; /* Horizontal scrollbar */
+    transition: width 0.3s ease; /* Smooth transition on hover */
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(225, 225, 225); /* Lighter background for better contrast */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+/* Scrollbar Thumb Styling */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, rgb(59, 130, 246), rgb(37, 99, 235)); /* Gradient effect */
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.6); /* Light border for contrast */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for a 3D effect */
+    transition: background 0.3s, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover Effect on Thumb */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, rgb(37, 99, 235), rgb(59, 130, 246)); /* Reverse the gradient on hover */
+    transform: scale(1.1); /* Slightly enlarge thumb on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
+}
+
+/* Active State for Thumb */
+::-webkit-scrollbar-thumb:active {
+    background: rgb(28, 77, 174); /* Darker color when thumb is clicked */
+    transform: scale(1); /* Reset scale */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Lighter shadow when active */
+}
+
+/* Track Styling for Horizontal Scroll */
+::-webkit-scrollbar-horizontal {
+    height: 8px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background: rgb(240, 240, 240); /* Lighter background for the horizontal track */
+}
+
+/* When Hovering on the Scrollbar, Increase Width */
+::-webkit-scrollbar:hover {
+    width: 16px; /* Wider scrollbar on hover */
+    height: 16px; /* Horizontal scrollbar */
+}
+
+/* Optional: Hide scrollbar on touch devices for smoother scrolling */
+@media (pointer: coarse) {
+    ::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+    }
+}
